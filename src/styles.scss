@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+// /* Color Palette - Sports Theme */
+:root {
+    --primary-dark: #131921;
+    /* Deep Navy (Header) */
+    --secondary-dark: #1d2d3d;
+    /* Lighter Navy (Cards) */
+    --accent-color: #00d4ff;
+    /* Cyan/Teal (Buttons/Highlights) */
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --bg-body: #eaeded;
+    /* Light Gray Background */
+    --card-bg: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: #333;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

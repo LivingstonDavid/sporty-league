@@ -1,0 +1,49 @@
+<!-- <app-league-header></app-league-header>
+
+<div class="main-container">
+
+    <app-league-filters [sports]="sportsOptions()" (searchChange)="onSearch($event)" (sportChange)="onFilter($event)">
+    </app-league-filters>
+
+    <div class="grid">
+        @for (league of leaguesList(); track league.idLeague) {
+        <app-league-card [league]="league" (cardClick)="openDetails(league)">
+        </app-league-card>
+        } @empty {
+        <div class="empty-state">
+            No leagues found matching your search.
+        </div>
+        }
+    </div>
+</div>
+
+@if (selectedLeague(); as league) {
+@if (selectedBadgeState$(); as badgeStream) {
+<app-league-details-modal [league]="league" [badgeState$]="badgeStream" (closeModal)="closeDetails()">
+</app-league-details-modal>
+}
+}  -->
+
+
+<app-league-header></app-league-header>
+
+<div class="main-container">
+    <app-league-filters [sports]="sportsOptions()" (searchChange)="onSearch($event)" (sportChange)="onFilter($event)">
+    </app-league-filters>
+
+    <div class="grid">
+        @for (league of leaguesList(); track league.idLeague) {
+        <app-league-card [league]="league" (cardClick)="openDetails(league)">
+        </app-league-card>
+        } @empty {
+        <div class="empty-state">
+            No leagues found matching your search.
+        </div>
+        }
+    </div>
+</div>
+
+@if (selectedLeague(); as league) {
+<app-league-details-modal [league]="league" [badgeState]="badgeState()" (closeModal)="closeDetails()">
+</app-league-details-modal>
+}
